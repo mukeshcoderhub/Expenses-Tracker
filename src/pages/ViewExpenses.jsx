@@ -63,7 +63,7 @@ const ViewExpenses = () => {
       )
     }else{
       return(<>
-       {expenses.slice(0, 4).map((e, idx) => {
+       {expenses.map((e, idx) => {
           return (
             <div onClick={() => handleItemsSelect(e.id)} key={idx} className={`w-9/10 h-18 border border-gray-400 rounded-xl border-dashed m-auto flex my-4 ${isSelectedButton && "cursor-pointer"} ${selectedId.includes(e.id) && isSelectedButton && "bg-blue-300"}`}>
               <div className="w-[20%] h-full flex justify-center items-center">
@@ -75,7 +75,7 @@ const ViewExpenses = () => {
               </div>
               <div className="w-[30%] h-full flex flex-col p-4 justify-evenly">
                 <p className="font-bold text-md text-end">₹{e.amount}</p>
-                <p className="font-light text-sm text-end">{e.date}</p>
+                <p className="font-light text-[12px] md:text-sm text-end">{e.date}</p>
               </div>
             </div>
           );
@@ -118,8 +118,8 @@ const ViewExpenses = () => {
       }
     }
   return (
-    <div className="w-screen h-screen bg-amber-50 p-1">
-    <div className={`w-3/5 h-140 border border-gray-500 m-auto my-6 rounded-2xl mb-28 relative`}>
+    <div className="w-screen h-screen bg-amber-50 p-1 flex justify-center items-center">
+    <div className={`w-9/10 md:w-3/5 h-8/10 border border-gray-500 m-auto my-6 rounded-2xl mb-28 relative`}>
       <div className="flex w-full justify-center items-center p-6">
         <p className="text-md font-bold text-center">Expenses</p>
         {
@@ -127,7 +127,7 @@ const ViewExpenses = () => {
         }
         
       </div>
-      <div id="ScrollBar" className="w-full h-120 flex-col justify-center items-center overflow-y-auto">
+      <div className="ScrollBar w-full h-[85%] flex-col justify-center items-center overflow-y-auto">
        {
         RecentExpenses()
        }

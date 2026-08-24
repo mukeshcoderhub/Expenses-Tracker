@@ -43,7 +43,7 @@ const AddExpenses = () => {
   };
   return (
     <div className="h-screen w-screen flex justify-center items-center bg-amber-50">
-      <div className="w-3/10 h-9/10 border rounded-2xl">
+      <div className="md:w-3/10 w-9/10 h-auto border rounded-2xl">
         <div className="flex justify-center items-center w-full p-4">
           <p className="text-xl font-bold">Add Expenses</p>
         </div>

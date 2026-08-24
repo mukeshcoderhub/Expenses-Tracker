@@ -17,27 +17,27 @@ const Recent = () => {
   const ImageFilter = (e) => {
     if(e.category == "food"){
         return <img
-                  className="h-4/5 rounded-full "
+                  className="h-6/10 md:h-4/5 rounded-full "
                   src={imagesURL.food}
                   alt=""
                 />
     }
     else if(e.category == "travel"){
         return <img
-                  className="h-4/5 rounded-full "
+                  className="h-6/10 md:h-4/5rounded-full "
                   src={imagesURL.travel}
                   alt=""
                 />
     }else if(e.category == "shopping"){
         return <img
-                  className="h-4/5 rounded-full "
+                  className="h-6/10 md:h-4/5 rounded-full "
                   src={imagesURL.shopping}
                   alt=""
                 />
     }
     else{
         return <img
-                  className="h-4/5 rounded-full "
+                  className="h-6/10 md:h-4/5 rounded-full "
                   src={imagesURL.others}
                   alt=""
                 />
@@ -60,11 +60,11 @@ const Recent = () => {
               </div>
               <div className="w-[50%] h-full flex flex-col py-4 justify-evenly">
                 <p className="font-bold text-md capitalize">{e.name}</p>
-                <p className="font-light capitalize">{e.category}</p>
+                <p className="font-light text-sm md:text-base capitalize">{e.category}</p>
               </div>
               <div className="w-[30%] h-full flex flex-col p-4 justify-evenly">
                 <p className="font-bold text-md text-end">₹{e.amount}</p>
-                <p className="font-light text-sm text-end">{e.date}</p>
+                <p className="font-light text-[10px] md:text-sm text-end">{e.date}</p>
               </div>
             </div>
           );
@@ -75,10 +75,10 @@ const Recent = () => {
   }
 
   return (
-    <div className="w-3/5 h-130 border border-gray-500 m-auto my-6 rounded-2xl mb-12">
+    <div className="w-9/10 md:w-3/5 h-130 border border-gray-500 m-auto my-6 rounded-2xl mb-12">
       <div className="flex w-full justify-between items-center p-6">
-        <p className="text-md font-bold">Recent Expenses</p>
-        <p onClick={() => navigate("/viewExpenses")} className="text-md font-bold text-blue-500 cursor-pointer">
+        <p className="text-sm md:text-md font-bold">Recent Expenses</p>
+        <p onClick={() => navigate("/viewExpenses")} className="text-sm md:text-md font-bold text-blue-500 cursor-pointer">
           View All
         </p>
       </div>
