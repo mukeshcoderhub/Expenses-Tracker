@@ -111,7 +111,6 @@ const ViewExpenses = () => {
       const newExpenses = expenses.filter(prev => !selectedId.includes(prev.id))
       localStorage.setItem("expenses", JSON.stringify(newExpenses));
       setisSelectedButton(false)
-      window.location.reload()
     }
       else{
         alert("Please select!")

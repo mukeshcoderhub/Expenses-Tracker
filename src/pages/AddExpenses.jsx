@@ -37,7 +37,6 @@ const AddExpenses = () => {
       setExpenseName("");
       setAmount("");
       setCategory("");
-      window.location.reload()
     }
   };
   return (
