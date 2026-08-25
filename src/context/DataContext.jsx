@@ -6,15 +6,12 @@ const DataContext = (props) => {
   const [expenses, setExpenses] = useState([]);
 
   useEffect(() => {
-    return () => {
       const data = localStorage.getItem("expenses");
       if (data) {
         setExpenses(JSON.parse(data));
-        console.log(expenses);
       } else {
         setExpenses([]);
       }
-    };
   }, []);
 
   return (

@@ -12,7 +12,6 @@ const AddExpenses = () => {
     if (expenseName == "" || amount == "" || category == "") {
       alert("Enter valid details");
     } else {
-      // const date = new Date().toLocaleDateString();
 
       const date = new Date().getDate();
       const month = new Date().toLocaleString("default", {month: "short"});
@@ -38,7 +37,7 @@ const AddExpenses = () => {
       setExpenseName("");
       setAmount("");
       setCategory("");
-      window.location.reload();
+      window.location.reload()
     }
   };
   return (
