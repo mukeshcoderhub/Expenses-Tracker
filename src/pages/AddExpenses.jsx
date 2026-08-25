@@ -6,6 +6,7 @@ const AddExpenses = () => {
   const [amount, setAmount] = useState("");
   const [category, setCategory] = useState("");
 
+  const {setExpenses} = useContext(DataContextApi)
   const formSubmit = (e) => {
     e.preventDefault();
 
@@ -26,13 +27,7 @@ const AddExpenses = () => {
         id: new Date()
       };
 
-      const olddata = localStorage.getItem("expenses");
-
-      const expenses = olddata ? JSON.parse(olddata) : [];
-
-      expenses.unshift(expense);
-
-      localStorage.setItem("expenses", JSON.stringify(expenses));
+      setExpenses(prev => [expense, ...prev])
       alert("Expense added successfully");
       setExpenseName("");
       setAmount("");

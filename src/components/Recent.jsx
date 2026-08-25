@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { DataContextApi } from "../context/DataContext";
 
 const Recent = () => {
-  const [expenses] = useContext(DataContextApi);
+  const {expenses} = useContext(DataContextApi);
   const navigate = useNavigate();
 
 

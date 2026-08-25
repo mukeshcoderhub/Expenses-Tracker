@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { DataContextApi } from "../context/DataContext";
 
 const Summary = () => {
-  const [expenses] = useContext(DataContextApi);
+  const {expenses} = useContext(DataContextApi);
   let FoodAmount;
   let TravelAmount;
   let ShoppingAmount;

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { DataContextApi } from "../context/DataContext";
 
 const Expenses = () => {
-  const [expenses] = useContext(DataContextApi);
+  const {expenses} = useContext(DataContextApi);
   const month = new Date().toLocaleString("default", {month:"long"})
   let sumAmount;
   if (expenses.length === 0) {

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { DataContextApi } from "../context/DataContext";
 
 const ViewExpenses = () => {
-  const [expenses] = useContext(DataContextApi);
+  const {expenses, setExpenses} = useContext(DataContextApi);
   const navigate = useNavigate();
 
 
@@ -109,7 +109,7 @@ const ViewExpenses = () => {
     const handleSelectDelete = () => {
       if(!selectedId.length == 0){
       const newExpenses = expenses.filter(prev => !selectedId.includes(prev.id))
-      localStorage.setItem("expenses", JSON.stringify(newExpenses));
+      setExpenses(newExpenses);
       setisSelectedButton(false)
     }
       else{
